@@ -70,14 +70,14 @@ public class PlayerController : MonoBehaviour {
         if (moveRight) {
             move.x += moveAmount;
         }
-
+        //A calculation designed to properly calcuate the diagonial movement of the ship.
         float moveMagnitude = Mathf.Sqrt(move.x * move.x + move.y * move.y);
         if (moveMagnitude > moveAmount)
         {
             float ratio = moveAmount / moveMagnitude;
             move *= ratio;
         }
-      //A calculation designed to properly calcuate the diagonial movement of the ship.
+      // Code for preventing the ship from flying outside the edge of the screen.
         Debug.Log(moveMagnitude);
         pos += move;
         if (pos.x <= -8.0f)
