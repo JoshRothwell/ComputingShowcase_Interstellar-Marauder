@@ -5,13 +5,19 @@ using UnityEngine;
 public class Destructable : MonoBehaviour
 {
     public GameObject explosion;
-
+    public int maxHealth = 3;
+    private int currentHealth;
     bool canBeDestroyed = false;
     public int scoreValue = 100;
+    public int bulletDamage = 1;
+    public int rocketDamage = 2;
+    public bool bulletsAffectEnemies = true;
+    public bool rocketsAffectEnemies = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
         Level.instance.AddDestructable();
     }
 
@@ -22,7 +28,6 @@ public class Destructable : MonoBehaviour
         {
             DestroyDestructable();
         }
-
 
         if (transform.position.x < 17.0f && !canBeDestroyed)
         {
@@ -42,17 +47,34 @@ public class Destructable : MonoBehaviour
             return;
         }
         Bullet bullet = collision.GetComponent<Bullet>();
-        if (bullet != null)
+        Rocket rocket = collision.GetComponent<Rocket>();
+        if (bullet != null && bulletsAffectEnemies)
         {
             if (!bullet.isEnemy)
             {
-                Level.instance.AddScore(scoreValue);
-                DestroyDestructable();
+                currentHealth -= bulletDamage;
+                if (currentHealth <= 0)
+                {
+                    Level.instance.AddScore(scoreValue);
+                    DestroyDestructable();
+                }
                 Destroy(bullet.gameObject);
             }
         }
+        else if (rocket != null && rocketsAffectEnemies)
+        {
+            if (!rocket.isEnemy)
+            {
+                currentHealth -= rocketDamage;
+                if (currentHealth <= 0)
+                {
+                    Level.instance.AddScore(scoreValue);
+                    DestroyDestructable();
+                }
+                Destroy(rocket.gameObject);
+            }
+        }
     }
-
 
     void DestroyDestructable()
     {
@@ -61,5 +83,5 @@ public class Destructable : MonoBehaviour
         Level.instance.RemoveDestructable();
         Destroy(gameObject);
     }
-
 }
+
