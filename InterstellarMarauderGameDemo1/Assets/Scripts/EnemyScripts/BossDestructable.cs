@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destructable : MonoBehaviour
+public class BossDestructable : MonoBehaviour
 {
     public GameObject explosion;
     public int maxHealth = 3;
@@ -11,8 +11,8 @@ public class Destructable : MonoBehaviour
     public int scoreValue = 100;
     public int bulletDamage = 1;
     public int rocketDamage = 2;
-    public bool bulletsAffectEnemies = true;
-    public bool rocketsAffectEnemies = true;
+    public bool bulletsAffectBosses = true;
+    public bool rocketsAffectBosses = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Destructable : MonoBehaviour
     {
         if (transform.position.x < -10)
         {
-            DestroyDestructable();
+            DestroyDestructableBoss();
         }
 
         if (transform.position.x < 17.0f && !canBeDestroyed)
@@ -48,7 +48,7 @@ public class Destructable : MonoBehaviour
         }
         Bullet bullet = collision.GetComponent<Bullet>();
         Rocket rocket = collision.GetComponent<Rocket>();
-        if (bullet != null && bulletsAffectEnemies)
+        if (bullet != null && bulletsAffectBosses)
         {
             if (!bullet.isEnemy)
             {
@@ -56,12 +56,12 @@ public class Destructable : MonoBehaviour
                 if (currentHealth <= 0)
                 {
                     Level.instance.AddScore(scoreValue);
-                    DestroyDestructable();
+                    DestroyDestructableBoss();
                 }
                 Destroy(bullet.gameObject);
             }
         }
-        else if (rocket != null && rocketsAffectEnemies)
+        else if (rocket != null && rocketsAffectBosses)
         {
             if (!rocket.isEnemy)
             {
@@ -69,14 +69,14 @@ public class Destructable : MonoBehaviour
                 if (currentHealth <= 0)
                 {
                     Level.instance.AddScore(scoreValue);
-                    DestroyDestructable();
+                    DestroyDestructableBoss();
                 }
                 Destroy(rocket.gameObject);
             }
         }
     }
 
-    void DestroyDestructable()
+    void DestroyDestructableBoss()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
 
