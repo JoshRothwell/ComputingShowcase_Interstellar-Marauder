@@ -13,6 +13,10 @@ public class Destructable : MonoBehaviour
     public int rocketDamage = 2;
     public bool bulletsAffectEnemies = true;
     public bool rocketsAffectEnemies = true;
+    public AudioClip hitSound;
+    public float spawnSoundVolume = 0.5f;
+    public AudioClip hitRocketSound;
+    public float spawnRocketSoundVolume = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +28,12 @@ public class Destructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -10)
+        if (transform.position.x < -8)
         {
             DestroyDestructable();
         }
 
-        if (transform.position.x < 17.0f && !canBeDestroyed)
+        if (transform.position.x < 6.0f && !canBeDestroyed)
         {
             canBeDestroyed = true;
             Gun[] guns = transform.GetComponentsInChildren<Gun>();
@@ -52,7 +56,11 @@ public class Destructable : MonoBehaviour
         {
             if (!bullet.isEnemy)
             {
+
                 currentHealth -= bulletDamage;
+
+                AudioSource.PlayClipAtPoint(hitSound, transform.position, spawnSoundVolume);
+
                 if (currentHealth <= 0)
                 {
                     Level.instance.AddScore(scoreValue);
@@ -65,6 +73,8 @@ public class Destructable : MonoBehaviour
         {
             if (!rocket.isEnemy)
             {
+                AudioSource.PlayClipAtPoint(hitRocketSound, transform.position, spawnRocketSoundVolume);
+
                 currentHealth -= rocketDamage;
                 if (currentHealth <= 0)
                 {

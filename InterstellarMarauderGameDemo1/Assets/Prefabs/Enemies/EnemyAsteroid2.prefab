@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2636022504357437460}
   - component: {fileID: 7324219067961713672}
   - component: {fileID: 915737622188108918}
+  - component: {fileID: 7951107785602541541}
   m_Layer: 0
   m_Name: EnemyAsteroid2
   m_TagString: Untagged
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67, y: 0.6}
+  m_Size: {x: 0.63, y: 0.57}
   m_EdgeRadius: 0
 --- !u!114 &915737622188108918
 MonoBehaviour:
@@ -146,10 +147,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2b11c2944c59d43b89fca2969d82e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
-  maxHealth: 10
+  explosion: {fileID: 7579529607731407276, guid: 5a79856f9e181f24db8ae0853e53d15c, type: 3}
+  maxHealth: 15
   scoreValue: 100
-  bulletDamage: 0
-  rocketDamage: 10
-  bulletsAffectEnemies: 0
+  bulletDamage: 1
+  rocketDamage: 15
+  bulletsAffectEnemies: 1
   rocketsAffectEnemies: 1
+  hitSound: {fileID: 8300000, guid: 0bacc6ae32dc3974b811314183819d15, type: 3}
+  spawnSoundVolume: 0.5
+  hitRocketSound: {fileID: 8300000, guid: f561bcb6afda0de4bba181f813d1f7b8, type: 3}
+  spawnRocketSoundVolume: 0.5
+--- !u!114 &7951107785602541541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915737622188108917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1c122b80b8c0a4bb4c7f576a6159a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4

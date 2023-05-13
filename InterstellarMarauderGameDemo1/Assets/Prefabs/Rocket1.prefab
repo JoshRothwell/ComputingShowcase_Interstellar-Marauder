@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5780622031650013498}
   - component: {fileID: 3722794436646722202}
   - component: {fileID: 1880975622564161850}
+  - component: {fileID: -7807598147387217736}
   m_Layer: 0
   m_Name: Rocket1
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255196833113723172}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.23183638, y: 0.4535472, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5780622031650013498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,7 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0}
+  explosion: {fileID: 7579529607731407276, guid: 4eed724b058559843a96e6615d3567c9, type: 3}
   speed: 15
+  explosionSound: {fileID: 8300000, guid: fc23c9f25aedbb34893de666ae048d63, type: 3}
+  spawnSoundVolume: 0.5
   velocity: {x: 0, y: 0}
   isEnemy: 0
 --- !u!212 &3722794436646722202
@@ -128,3 +132,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &-7807598147387217736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255196833113723172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ae180a74dacba43b2329139b5dd349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

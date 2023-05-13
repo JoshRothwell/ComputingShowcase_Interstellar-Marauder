@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2849519951617107572}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 10.66, y: 1.43, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -176,5 +176,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2b11c2944c59d43b89fca2969d82e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 7579529607731407276, guid: 4eed724b058559843a96e6615d3567c9, type: 3}
+  explosion: {fileID: 7579529607731407276, guid: 5a79856f9e181f24db8ae0853e53d15c, type: 3}
+  maxHealth: 3
   scoreValue: 100
+  bulletDamage: 1
+  rocketDamage: 2
+  bulletsAffectEnemies: 1
+  rocketsAffectEnemies: 1
+  hitSound: {fileID: 8300000, guid: 0bacc6ae32dc3974b811314183819d15, type: 3}
+  spawnSoundVolume: 0.5
+  hitRocketSound: {fileID: 8300000, guid: f561bcb6afda0de4bba181f813d1f7b8, type: 3}
+  spawnRocketSoundVolume: 0.5

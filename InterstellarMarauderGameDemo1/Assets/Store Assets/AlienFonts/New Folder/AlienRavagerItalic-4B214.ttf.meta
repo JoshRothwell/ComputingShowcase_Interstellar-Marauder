@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 62a79113dcd391d42a14e1c9737ed854
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Alien Ravager
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 176c9840265418b4b81bb73851e60ccd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,7 @@ public class Level : MonoBehaviour
     bool startNextLevel = false;
     float nextLevelTimer = 3;
 
-    string[] levels = { "Level1", "Level2", "Level3" };
+    string[] levels = { "Level1", "Level2", "Level3", "Level4", "Level5", "Level6", "Level7" };
     int currentLevel = 1;
 
     int score = 0;
@@ -47,7 +47,7 @@ public class Level : MonoBehaviour
             if (nextLevelTimer <= 0)
             {
                 currentLevel++;
-                if (currentLevel <= levels.Length)
+                if (currentLevel <= levels.Length) // Check if still within bounds of levels array
                 {
                     string sceneName = levels[currentLevel - 1];
                     SceneManager.LoadSceneAsync(sceneName);
@@ -64,7 +64,14 @@ public class Level : MonoBehaviour
                 nextLevelTimer -= Time.deltaTime;
             }
         }
+        Debug.Log("startNextLevel: " + startNextLevel);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+
     }
+
 
     public void ResetLevel()
     {
@@ -89,7 +96,9 @@ public class Level : MonoBehaviour
     public void AddDestructable()
     {
         numDestructables++;
+        Debug.Log("Num destructables: " + numDestructables);
     }
+
 
     public void RemoveDestructable()
     {
@@ -99,6 +108,8 @@ public class Level : MonoBehaviour
         {
             startNextLevel = true;
         }
+        Debug.Log("Number of destructables remaining: " + numDestructables);
+
 
     }
 

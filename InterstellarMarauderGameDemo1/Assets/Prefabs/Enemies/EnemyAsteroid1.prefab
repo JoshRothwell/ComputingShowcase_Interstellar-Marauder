@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1c122b80b8c0a4bb4c7f576a6159a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 4
 --- !u!114 &4273377352525120730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,10 +160,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2b11c2944c59d43b89fca2969d82e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
-  maxHealth: 10
+  explosion: {fileID: 7579529607731407276, guid: 5a79856f9e181f24db8ae0853e53d15c, type: 3}
+  maxHealth: 2
   scoreValue: 50
-  bulletDamage: 2
-  rocketDamage: 10
+  bulletDamage: 1
+  rocketDamage: 2
   bulletsAffectEnemies: 1
   rocketsAffectEnemies: 1
+  hitSound: {fileID: 8300000, guid: 0bacc6ae32dc3974b811314183819d15, type: 3}
+  spawnSoundVolume: 0.5
+  hitRocketSound: {fileID: 8300000, guid: f561bcb6afda0de4bba181f813d1f7b8, type: 3}
+  spawnRocketSoundVolume: 0.5

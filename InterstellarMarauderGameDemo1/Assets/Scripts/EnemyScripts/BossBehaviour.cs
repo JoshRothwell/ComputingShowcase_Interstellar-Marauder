@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossBehaviour : MonoBehaviour
 {
     //Speed of enemy
-    public float moveSpeed = 7;
+    public float moveSpeed = 2;
     public float maxY = 2f;
     public float minY = -2f;
     private bool moveVertically = false;
@@ -34,7 +34,7 @@ public class BossBehaviour : MonoBehaviour
             pos.x -= moveSpeed * Time.fixedDeltaTime;
 
             // Check if X position is less than 5
-            if (pos.x < 5)
+            if (pos.x < 4)
             {
                 // Start moving vertically
                 moveVertically = true;

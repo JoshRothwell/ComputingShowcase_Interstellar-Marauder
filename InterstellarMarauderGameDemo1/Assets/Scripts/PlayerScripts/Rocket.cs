@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour
 {
 
     public Vector2 direction = new Vector2(1, 0);
+    public GameObject explosion;
     public float speed = 2;
 
     public Vector2 velocity;
@@ -32,5 +33,12 @@ public class Rocket : MonoBehaviour
         pos += velocity * Time.fixedDeltaTime;
 
         transform.position = pos;
+    }
+    void DestroyDestructableRocket()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+
+        Level.instance.RemoveDestructable();
+        Destroy(gameObject);
     }
 }
