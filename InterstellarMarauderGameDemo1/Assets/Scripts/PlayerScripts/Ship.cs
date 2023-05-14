@@ -17,7 +17,7 @@ public class Ship : MonoBehaviour
     float moveSpeed = 3;
     float speedMultiplier = 1;
 
-    int hits = 3;
+    int hits = 10;
     bool invincible = false;
     float invincibleTimer = 0;
     float invincibleTime = 2;
@@ -240,7 +240,7 @@ public class Ship : MonoBehaviour
         powerUpGunLevel = -1;
         AddGuns();
         SetSpeedMultiplier(1);
-        hits = 3;
+        hits = 10;
         Level.instance.ResetLevel();
     }
 
