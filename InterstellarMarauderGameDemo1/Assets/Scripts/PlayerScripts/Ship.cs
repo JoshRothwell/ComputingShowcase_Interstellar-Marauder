@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using MyGame.LevelScripts;
-
-//namespace MyGame.PlayerScripts
-//{
 
 public class Ship : MonoBehaviour
 {
@@ -54,6 +50,7 @@ public class Ship : MonoBehaviour
 
         // Get reference to PowerUp component on this GameObject
         powerUp = GetComponent<PowerUp>();
+        rocketLauncher = GetComponent<RocketLauncher>();
 
         shield = transform.Find("Shield").gameObject;
         DeactivateShield();
@@ -219,6 +216,16 @@ public class Ship : MonoBehaviour
         }
     }
 
+    void PowerUpAmmo()
+    {
+        RocketLauncher rocketLauncher = GetComponentInChildren<RocketLauncher>();
+        if (rocketLauncher != null)
+        {
+            rocketLauncher.AddAmmo(5);
+        }
+    }
+
+
     void SetSpeedMultiplier(float mult)
     {
         speedMultiplier = mult;
@@ -291,6 +298,10 @@ public class Ship : MonoBehaviour
             if (powerUp.addGuns)
             {
                 AddGuns();
+            }
+            if (powerUp.powerUpAmmo)
+            {
+                PowerUpAmmo();
             }
 
 

@@ -24,7 +24,7 @@ public class Boss2Destructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -25)
+        if (transform.position.x < -35)
         {
             DestroyDestructable();
         }

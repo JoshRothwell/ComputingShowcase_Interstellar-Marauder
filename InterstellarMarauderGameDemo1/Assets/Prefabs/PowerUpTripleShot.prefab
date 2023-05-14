@@ -60,12 +60,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60439c4362fa9ea45a39edad5ef8cd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 250
+  pointValue: 500
   activateShield: 0
   addGuns: 1
   increaseSpeed: 0
-  giveRocketAmmo: 0
-  rocketLauncher: {fileID: 0}
+  powerUpAmmo: 0
 --- !u!61 &3618780739490618250
 BoxCollider2D:
   m_ObjectHideFlags: 0

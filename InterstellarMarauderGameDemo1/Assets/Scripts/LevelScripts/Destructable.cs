@@ -28,7 +28,7 @@ public class Destructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -8)
+        if (transform.position.x < -12)
         {
             DestroyDestructable();
         }

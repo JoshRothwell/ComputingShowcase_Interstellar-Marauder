@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpLevelRequirement: 0
-  bullet: {fileID: 4255196833113723173, guid: f90ecadcd5107164fa16d69715fc2bc5, type: 3}
+  bullet: {fileID: 4255196833113723173, guid: 5a5ad311313a3aa4aa398bc917d63aa9, type: 3}
   PlayerShip: {fileID: 0}
   autoShoot: 1
   shootIntervalSeconds: 5
@@ -686,11 +686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootDelaySeconds
-      value: 1
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootIntervalSeconds
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
@@ -766,6 +766,14 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
 --- !u!4 &2551309256567906978 stripped
@@ -839,6 +847,14 @@ PrefabInstance:
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: autoShoot
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
@@ -996,6 +1012,14 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
 --- !u!4 &2273118078712156160 stripped
@@ -1069,6 +1093,14 @@ PrefabInstance:
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: autoShoot
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
@@ -1146,11 +1178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootDelaySeconds
-      value: 1
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootIntervalSeconds
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
@@ -1392,11 +1424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootDelaySeconds
-      value: 1
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: shootIntervalSeconds
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
@@ -1472,6 +1504,14 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
 --- !u!4 &6037613376890610429 stripped
@@ -1546,6 +1586,14 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}
 --- !u!4 &5122838750084040238 stripped
@@ -1619,6 +1667,14 @@ PrefabInstance:
     - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
       propertyPath: autoShoot
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999431117690255222, guid: 814995a77dcf541478d6451ed2105218, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814995a77dcf541478d6451ed2105218, type: 3}

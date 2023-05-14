@@ -30,7 +30,7 @@ public class BossDestructable : MonoBehaviour
     {
       
 
-        if (transform.position.x < 9.0f && !canBeDestroyed)
+        if (transform.position.x < 20.0f && !canBeDestroyed)
         {
             canBeDestroyed = true;
             Gun[] guns = transform.GetComponentsInChildren<Gun>();

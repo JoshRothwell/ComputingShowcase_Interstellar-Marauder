@@ -24,7 +24,7 @@ public class DistantBossDestructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > 12)
+        if (transform.position.x > 16)
         {
             DestroyPowerUpDestructable();
         }

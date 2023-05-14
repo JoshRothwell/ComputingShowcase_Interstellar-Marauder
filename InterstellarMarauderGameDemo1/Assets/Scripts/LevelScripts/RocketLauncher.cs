@@ -18,7 +18,7 @@ public class RocketLauncher : MonoBehaviour
     public bool isActive = false;
     bool rocketfire;
 
-    private int currentAmmo = 0;
+    private int currentAmmo = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +77,7 @@ public class RocketLauncher : MonoBehaviour
         currentAmmo += amount;
     }
 }
+
 
 
 

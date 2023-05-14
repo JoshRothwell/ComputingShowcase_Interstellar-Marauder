@@ -8,6 +8,7 @@ public class PowerUp : MonoBehaviour
     public bool activateShield;
     public bool addGuns;
     public bool increaseSpeed;
+    public bool powerUpAmmo;
 
 
     // Start is called before the first frame update
