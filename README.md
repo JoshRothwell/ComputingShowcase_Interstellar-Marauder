@@ -1,5 +1,5 @@
 # Interstellar Marauder
- This short game demo was created for the 2023 NCI Computing Project Showcase.
+ This 2D Unity game was created for the 2023 NCI Computing Project Showcase.
 
  ## What is Interstellar Marauder?
 Interstellar Marauder is a short space shooter game in which the player takes the role of the Antagonist of the story, a lone ship serving under a malevolent alien race that has its sights set on planet Earth.
